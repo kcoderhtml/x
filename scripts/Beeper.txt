@@ -1,0 +1,12 @@
+REM Author: kcoderhtml
+REM Description: Beeps randomly every 10-20 seconds for 1 minute, shows a message box, and toggles Caps Lock twice.
+
+DELAY 500
+GUI r
+DELAY 500
+STRING powershell -Command "$endTime = (Get-Date).AddMinutes(1); while ((Get-Date) -lt $endTime) { [console]::Beep(1000,200); Start-Sleep -Seconds (Get-Random -Minimum 10 -Maximum 20) }; [System.Windows.MessageBox]::Show('Beeping completed!','Alert');"
+ENTER
+DELAY 500
+CAPSLOCK
+DELAY 200
+CAPSLOCK
